@@ -75,11 +75,11 @@ flags:
     have-quartz-gtk: true
 ```
 
-- Mac (Quartz) に対応させるためのオプション
+- `have-quartz-gtk`: Mac (Quartz) に対応させるためのフラグ
 
 #### `(プロジェクト名).cabal`
 
-[サンプル]()
+[サンプル](https://github.com/sky-y/hs-chart-tutorial/blob/master/chart-tutorial.cabal)も参照
 
 `executable`セクション内:
 
@@ -125,7 +125,7 @@ main = toWindow 400 400 $ do
   plot (points "am points" (signal [0,7..400]))
 ```
 
-### `stack build`
+### ビルドする
 
 ```
 $ stack build
@@ -137,7 +137,7 @@ $ stack build
 $ stack exec 
 ```
 
-- こっそりウインドウ(App)が起動している（分かりにくいけど）
+- こっそりウインドウ(App)が起動しているはず（分かりにくいけど）
 
 ## 参考
 
