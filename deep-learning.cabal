@@ -1,0 +1,26 @@
+name:                deep-learning
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/sky-y/deep-learning#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Yuki Fujiwara
+maintainer:          sky.y.0079@gmail.com
+copyright:           2017 Yuki Fujiwara
+category:            Development
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable chart-tutorial
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  build-depends:       base
+                     , cairo
+                     , Chart
+                     , Chart-diagrams
+                     , Chart-cairo
+                     , Chart-gtk
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
