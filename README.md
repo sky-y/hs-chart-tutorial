@@ -33,7 +33,7 @@ at [Haskell.hs もくもく会 ディープラーニング #07](https://remotehs
 - Stack
     - `$ brew install haskell-stack`
 - GTK+
-    - `brew install gtk+`
+    - `$ brew install gtk+`
     - 注意
         - GTK+はバージョン2.x系と3.x系がある
         - Chartには2.x系が必要
