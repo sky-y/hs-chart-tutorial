@@ -1,4 +1,4 @@
-# 
+# Haskellのグラフ描画ライブラリChartの導入
 
 at [Haskell.hs もくもく会 ディープラーニング #07](https://remotehs.connpass.com/event/51656/)
 
