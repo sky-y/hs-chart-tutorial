@@ -1,8 +1,8 @@
-name:                deep-learning
+name:                chart-tutorial
 version:             0.1.0.0
 -- synopsis:
 -- description:
-homepage:            https://github.com/sky-y/deep-learning#readme
+homepage:            https://github.com/sky-y/hs-chart-tutorial#readme
 license:             BSD3
 license-file:        LICENSE
 author:              Yuki Fujiwara

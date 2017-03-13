@@ -6,23 +6,24 @@ at [Haskell.hs もくもく会 ディープラーニング #07](https://remotehs
 
 最低限のHaskellデータ処理環境を作る
 
-- [hmatrix](https://github.com/albertoruiz/hmatrix)
-    - ベクトル・行列のデータ型と演算
-    - PythonでいうNumPy的なやつ
-    - チュートリアル: <http://dis.um.es/~alberto/hmatrix/hmatrix.html>
-- [Chart](https://github.com/timbod7/haskell-chart/wiki)
-    - グラフ描画
-    - 2つの種類がある
-        - chart-diagrams
+- グラフ描画ライブラリ: [Chart](https://github.com/timbod7/haskell-chart/wiki)
+    - 基本としては、2つの系統がある
+        - [Chart-diagrams](https://hackage.haskell.org/package/Chart-diagrams)
             - cairoに依存しない
             - SVGとPSファイルのみ
-        - [Chart-cairo]()
+        - [Chart-cairo](https://hackage.haskell.org/package/Chart-cairo)
             - cairoに依存
             - 出力はPNG, PS, SVG, PDF
-        - [Chart-gtk](https://hackage.haskell.org/package/Chart-gtk)
-            - cairoに依存
-            - GUIウインドウ(GTK+)に出せる
         - 参考: [How to Use Backend (Chart)](https://github.com/timbod7/haskell-chart/wiki/How-to-use-backends)
+    - GUIウインドウ(GTK+)に出す場合
+        - [Chart-gtk](https://hackage.haskell.org/package/Chart-gtk)
+            - Chart-cairoベース
+            - cairoとGTK+（バージョン2.x系）に依存
+- 今回やらない（参考までに・次回やりたい）
+    -  [hmatrix](https://github.com/albertoruiz/hmatrix)
+        - ベクトル・行列のデータ型と演算
+        - PythonでいうNumPy的なやつ
+        - チュートリアル: <http://dis.um.es/~alberto/hmatrix/hmatrix.html>
 
 
 ## 必要なもの
@@ -31,7 +32,7 @@ at [Haskell.hs もくもく会 ディープラーニング #07](https://remotehs
 
 - Stack
     - `$ brew install haskell-stack`
-- GTK+ (Chart-gtkを使用する場合)
+- GTK+
     - `brew install gtk+`
     - 注意
         - GTK+はバージョン2.x系と3.x系がある
@@ -52,6 +53,8 @@ $ stack setup
 ### Stackの設定を編集する
 
 #### `stack.yaml`
+
+[サンプル](https://github.com/sky-y/hs-chart-tutorial/blob/master/stack.yaml)も参照してください。
 
 ```
 resolver: lts-8.2
@@ -75,6 +78,8 @@ flags:
 - Mac (Quartz) に対応させるためのオプション
 
 #### `(プロジェクト名).cabal`
+
+[サンプル]()
 
 `executable`セクション内:
 
